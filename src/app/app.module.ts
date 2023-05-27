@@ -7,6 +7,7 @@ import { Example01InterpolationComponent } from './example01-interpolation/examp
 import { Example02PropertyBindingComponent } from './example02-property-binding/example02-property-binding.component';
 import { Example03EventBindingComponent } from './example03-event-binding/example03-event-binding.component';
 import { Example04TwoWayDataBindingComponent } from './example04-two-way-data-binding/example04-two-way-data-binding.component';
+import { Example05PessoasComponent } from './example05-pessoas/example05-pessoas.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Example04TwoWayDataBindingComponent } from './example04-two-way-data-bi
     Example01InterpolationComponent,
     Example02PropertyBindingComponent,
     Example03EventBindingComponent,
-    Example04TwoWayDataBindingComponent
+    Example04TwoWayDataBindingComponent,
+    Example05PessoasComponent
   ],
   imports: [
     BrowserModule,

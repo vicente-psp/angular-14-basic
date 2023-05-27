@@ -1,0 +1,55 @@
+<div class="cadastro">
+  <!-- text interpolation -->
+  <h3>{{ titulo }}</h3>
+
+  <!-- two-way binding -->
+  <div class="row" style="display: flex;">
+    <div class="nome">
+      <label for="nome">nome</label>
+      <input type="text" id="nome" [(ngModel)]="pessoa.nome">
+    </div>
+    <div class="data-nascimento">
+      <label for="dataNascimento">data de nascimento</label>
+      <input type="date" id="dataNascimento" [(ngModel)]="pessoa.dataNascimento">
+    </div>
+  </div>
+  <div class="row">
+    <div class="telefone">
+      <label for="telefone">telefone</label>
+      <input type="text" id="telefone" [(ngModel)]="pessoa.telefone">
+    </div>
+  </div>
+  <div class="row" style="display: flex;">
+    <div class="rua">
+      <label for="rua">rua</label>
+      <input type="text" id="rua" [(ngModel)]="pessoa.rua">
+    </div>
+    <div class="numero">
+      <label for="numero">número</label>
+      <input type="text" id="numero" [(ngModel)]="pessoa.numero">
+    </div>
+  </div>
+  <div class="row">
+    <div class="bairro">
+      <label for="endereco">bairro</label>
+      <input type="text" id="bairro" [(ngModel)]="pessoa.bairro">
+    </div>
+  </div>
+  <div class="row">
+    <div class="email">
+      <label for="endereco">email</label>
+      <input type="email" id="email" [(ngModel)]="pessoa.email">
+    </div>
+  </div>
+
+  <!-- event binding e property binding -->
+  <div class="row">
+    <button class="success" (click)="salvar()" [disabled]="!isValidPessoa()">salvar</button>
+    <button (click)="limpar()">limpar</button>
+  </div>
+</div>
+
+<!-- property binding -->
+<div class="formulario" [class]="isValidPessoa() ? 'formulario-valid' : 'formulario-invalid'">
+  <p>{{ mensagem }}</p>
+</div>
