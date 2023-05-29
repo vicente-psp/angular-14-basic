@@ -42,6 +42,13 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="telefone">
+      <label for="controlTelefone">telefone</label>
+      <input type="text" id="controlTelefone" [formControl]="controlTelefone">
+    </div>
+  </div>
+
   <!-- event binding e property binding -->
   <div class="row">
     <button class="success" (click)="salvar()" [disabled]="!isValidPessoa()">salvar</button>
