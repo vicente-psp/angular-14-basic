@@ -1,23 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Pessoa {
-  nome: string;
-  dataNascimento: string;
-  telefone: string;
-  rua?: string;
-  numero?: string;
-  bairro?: string;
-  email: string;
-}
-
-const factoryPessoa = (): Pessoa => {
-  return {
-    nome: '',
-    dataNascimento: '',
-    telefone: '',
-    email: ''
-  }
-}
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-example05-pessoas',
@@ -26,28 +8,25 @@ const factoryPessoa = (): Pessoa => {
 })
 export class Example05PessoasComponent {
 
-  mensagem = 'formulário inválido';
   titulo = 'Cadastro de pessoas';
-  pessoa: Pessoa = factoryPessoa();
+  formGroupPessoa = new FormGroup({
+    nome: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    dataNascimento: new FormControl('', Validators.required),
+    telefone: new FormControl('', [Validators.required, Validators.pattern(/^[(]\d{2}[)]\d{4,5}[-]\d{4}/gi)]),
+    rua: new FormControl(''),
+    numero: new FormControl<number | null>(null),
+    bairro: new FormControl(''),
+    email: new FormControl('', [Validators.required, Validators.email])
+  });
 
   salvar(): void {
-    console.log('pessoa => ', this.pessoa);
-    if (this.isValidPessoa()) {
-      console.log('salvar pessoa');
+    if (this.formGroupPessoa.valid) {
+      console.log('salvar pessoa => ', this.formGroupPessoa.value);
     }
   }
 
   limpar(): void {
-    this.pessoa = factoryPessoa();
+    this.formGroupPessoa.reset();
   }
 
-  isValidPessoa(): boolean {
-    if (!this.pessoa.nome || !this.pessoa.dataNascimento
-      || !this.pessoa.telefone || !this.pessoa.email) {
-      this.mensagem = 'formulário inválido';
-      return false;
-    }
-    this.mensagem = 'formulário válido';
-    return true;
-  }
 }
