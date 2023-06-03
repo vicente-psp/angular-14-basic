@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let value of lista; last as isLast; even as isEven; index as i;"
+    [ngStyle]="styles(isLast, isEven)">
+    {{ 'índice: ' + i + ' - valor: ' + value }}
+  </li>
+</ul>

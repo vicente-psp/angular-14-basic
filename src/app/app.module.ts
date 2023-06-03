@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Example01InterpolationComponent } from './example01-interpolation/example01-interpolation.component';
 import { NgifComponent } from './example06-directives/ngif/ngif.component';
+import { NgforComponent } from './example06-directives/ngfor/ngfor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Example01InterpolationComponent,
-    NgifComponent
+    NgifComponent,
+    NgforComponent
   ],
   imports: [
     BrowserModule,
