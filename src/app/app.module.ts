@@ -7,6 +7,7 @@ import { Example01InterpolationComponent } from './example01-interpolation/examp
 import { NgifComponent } from './example06-directives/structural-directives/ngif/ngif.component';
 import { NgforComponent } from './example06-directives/structural-directives/ngfor/ngfor.component';
 import { NgswitchComponent } from './example06-directives/structural-directives/ngswitch/ngswitch.component';
+import { AttributeDirectivesComponent } from './example06-directives/attribute-directives/attribute-directives.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NgswitchComponent } from './example06-directives/structural-directives/
     Example01InterpolationComponent,
     NgifComponent,
     NgforComponent,
-    NgswitchComponent
+    NgswitchComponent,
+    AttributeDirectivesComponent
   ],
   imports: [
     BrowserModule,
