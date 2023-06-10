@@ -1,0 +1,30 @@
+<h2>Lista empresas</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let obj of list; even as isEven; odd as isOdd;"
+    [ngStyle]="styles(isEven)" [ngClass]="{'teste-1': isOdd}">
+    <td>{{ obj.id }}</td>
+    <td>{{ obj.company }}</td>
+    <td>{{ obj.contact }}</td>
+    <td>
+      <div [ngSwitch]="obj.country">
+        <div *ngSwitchCase="'Brazil'">BR</div>
+        <div *ngSwitchCase="'Germany'">GE</div>
+        <div *ngSwitchCase="'Mexico'">MX</div>
+        <div *ngSwitchDefault>NA</div>
+      </div>
+    </td>
+    <td>
+      <span *ngIf="obj.status; else elseStatus">Ativo</span>
+      <ng-template #elseStatus>Inativo</ng-template>
+    </td>
+  </tr>
+</table>
+

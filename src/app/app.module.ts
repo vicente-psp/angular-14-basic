@@ -8,6 +8,7 @@ import { NgifComponent } from './example06-directives/structural-directives/ngif
 import { NgforComponent } from './example06-directives/structural-directives/ngfor/ngfor.component';
 import { NgswitchComponent } from './example06-directives/structural-directives/ngswitch/ngswitch.component';
 import { AttributeDirectivesComponent } from './example06-directives/attribute-directives/attribute-directives.component';
+import { ReviewComponent } from './example06-directives/review/review.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AttributeDirectivesComponent } from './example06-directives/attribute-d
     NgifComponent,
     NgforComponent,
     NgswitchComponent,
-    AttributeDirectivesComponent
+    AttributeDirectivesComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
