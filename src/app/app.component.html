@@ -1,8 +1,18 @@
-<!--
-<app-example01-interpolation></app-example01-interpolation>
-<app-ngif></app-ngif>
-<app-ngfor></app-ngfor>
-<app-ngswitch></app-ngswitch>
-<app-attribute-directives></app-attribute-directives>
- -->
- <app-review></app-review>
+<div>
+  <label for="aplicacao">Escolha a aplicação a ser exibida:</label>
+  <select name="aplicacao" id="aplicacao" (change)="selectApp($event)">
+    <option value="appExample01Interpolation">app-example01-interpolation</option>
+    <option value="appNgif">app-ngif</option>
+    <option value="appNgfor">app-ngfor</option>
+    <option value="appNgswitch">app-ngswitch</option>
+    <option value="appAttributeDirectives">app-attribute-directives</option>
+    <option value="appReview">app-review</option>
+  </select>
+</div>
+
+<app-example01-interpolation [hidden]="!appExample01Interpolation"></app-example01-interpolation>
+<app-ngif [style]="{display: !appNgif ? 'none': null}"></app-ngif>
+<app-ngfor [ngStyle]="{visibility: !appNgfor ? 'hidden' : null}"></app-ngfor>
+<app-ngswitch *ngIf="appNgswitch"></app-ngswitch>
+<app-attribute-directives *ngIf="appAttributeDirectives"></app-attribute-directives>
+ <app-review *ngIf="appReview"></app-review>
