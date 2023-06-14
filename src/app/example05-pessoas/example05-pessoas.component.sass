@@ -1,0 +1,54 @@
+.cadastro
+  border: 2px solid
+  border-radius: 5px
+  padding: 10px
+
+  .row
+    padding-top: 10px
+
+    .nome, .data-nascimento, .telefone, .rua, .numero, .bairro, .email
+      display: grid
+
+    .nome, .rua
+      width: 70%
+      padding-right: 5px
+
+    .data-nascimento, .numero
+      margin-left: auto
+
+    button
+      margin-right: 10px
+      margin-top: 10px
+      padding: 5px
+
+      &:hover
+        cursor: pointer
+
+    .success
+      background-color: green
+      color: white
+
+      &:disabled
+        background-color: #f0f0f0
+        color: black
+        cursor: not-allowed
+
+
+.formulario
+  margin-top: 15px
+  padding: 5px
+  border-radius: 5px
+
+  p
+    padding-left: 15px
+    padding-right: 15px
+    font-size: 18px
+    font-family: Arial, Helvetica, sans-serif
+
+  &-valid
+    background-color: green
+    color: white
+
+  &-invalid
+    background-color: red
+    color: white

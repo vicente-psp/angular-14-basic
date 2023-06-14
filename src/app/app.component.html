@@ -1,1 +1,38 @@
-<app-example01-interpolation></app-example01-interpolation>
+<div>
+  <label for="aplicacao">Escolha a aplicação a ser exibido:</label>
+  <select name="aplicacao" id="aplicacao" (change)="selectApp($event)">
+    <option value="isExample01">example-01</option>
+    <option value="isExample02">example-02</option>
+    <option value="isExample03">example-03</option>
+    <option value="isExample04">example-04</option>
+    <option value="isExample05">example-05</option>
+    <option value="isExample06">example-06</option>
+  </select>
+</div>
+<app-example01-interpolation *ngIf="isExample01" [hidden]="!appExample01Interpolation"></app-example01-interpolation>
+<app-example02-property-binding *ngIf="isExample02"></app-example02-property-binding>
+<app-example03-event-binding *ngIf="isExample03"></app-example03-event-binding>
+<div *ngIf="isExample04">
+  <app-example04-two-way-data-binding [(size)]="sizeApp"></app-example04-two-way-data-binding>
+  <h1>{{ sizeApp }}</h1>
+</div>
+<app-example05-pessoas *ngIf="isExample05"></app-example05-pessoas>
+<div *ngIf="isExample06" class="example-06">
+  <div>
+    <label for="directives">Escolha o exemplo de diretiva a ser exibido:</label>
+    <select id="directives" (change)="selectDirectiveApp($event)">
+      <option value="appExample01Interpolation">app-example01-interpolation</option>
+      <option value="appNgif">app-ngif</option>
+      <option value="appNgfor">app-ngfor</option>
+      <option value="appNgswitch">app-ngswitch</option>
+      <option value="appAttributeDirectives">app-attribute-directives</option>
+      <option value="appReview">app-review</option>
+    </select>
+  </div>
+  <app-example01-interpolation [hidden]="!appExample01Interpolation"></app-example01-interpolation>
+  <app-ngif [style]="{display: !appNgif ? 'none': null}"></app-ngif>
+  <app-ngfor [ngStyle]="{visibility: !appNgfor ? 'hidden' : null}"></app-ngfor>
+  <app-ngswitch *ngIf="appNgswitch"></app-ngswitch>
+  <app-attribute-directives *ngIf="appAttributeDirectives"></app-attribute-directives>
+  <app-review *ngIf="appReview"></app-review>
+</div>
