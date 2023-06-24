@@ -33,6 +33,7 @@ export class AppComponent {
     this.isExample04 = event.srcElement.value === 'isExample04';
     this.isExample05 = event.srcElement.value === 'isExample05';
     this.isExample06 = event.srcElement.value === 'isExample06';
+    this.isExample07 = event.srcElement.value === 'isExample07';
   }
 
   /**
