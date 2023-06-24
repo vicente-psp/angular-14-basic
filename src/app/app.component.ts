@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   sizeApp = 1;
 
-  isExample01 = true;
+  isExample01 = false;
   isExample02 = false;
   isExample03 = false;
   isExample04 = false;
   isExample05 = false;
   isExample06 = false;
+  isExample07 = true;
   appExample01Interpolation = true;
   appNgif = false;
   appNgfor = false;

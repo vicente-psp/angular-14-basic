@@ -13,6 +13,9 @@ import { NgforComponent } from './example06-directives/structural-directives/ngf
 import { NgswitchComponent } from './example06-directives/structural-directives/ngswitch/ngswitch.component';
 import { AttributeDirectivesComponent } from './example06-directives/attribute-directives/attribute-directives.component';
 import { ReviewComponent } from './example06-directives/review/review.component';
+import { ResultComponent } from './example07-components/result/result.component';
+import { ButtonComponent } from './example07-components/button/button.component';
+import { DescriptionComponent } from './example07-components/description/description.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ReviewComponent } from './example06-directives/review/review.component'
     NgforComponent,
     NgswitchComponent,
     AttributeDirectivesComponent,
-    ReviewComponent
+    ReviewComponent,
+    ResultComponent,
+    ButtonComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,

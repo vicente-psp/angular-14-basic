@@ -7,6 +7,7 @@
     <option value="isExample04">example-04</option>
     <option value="isExample05">example-05</option>
     <option value="isExample06">example-06</option>
+    <option value="isExample07">example-07</option>
   </select>
 </div>
 <app-example01-interpolation *ngIf="isExample01" [hidden]="!appExample01Interpolation"></app-example01-interpolation>
@@ -35,4 +36,7 @@
   <app-ngswitch *ngIf="appNgswitch"></app-ngswitch>
   <app-attribute-directives *ngIf="appAttributeDirectives"></app-attribute-directives>
   <app-review *ngIf="appReview"></app-review>
+</div>
+<div *ngIf="isExample07">
+  <app-result></app-result>
 </div>
