@@ -8,6 +8,7 @@
     <option value="isExample05">example-05</option>
     <option value="isExample06">example-06</option>
     <option value="isExample07">example-07</option>
+    <option value="isExample08">example-08</option>
   </select>
 </div>
 <app-example01-interpolation *ngIf="isExample01" [hidden]="!appExample01Interpolation"></app-example01-interpolation>
@@ -39,4 +40,8 @@
 </div>
 <div *ngIf="isExample07">
   <app-result></app-result>
+</div>
+<div *ngIf="isExample08">
+  <app-component01></app-component01>
+  <app-component02></app-component02>
 </div>

@@ -15,6 +15,7 @@ export class AppComponent {
   isExample05 = false;
   isExample06 = false;
   isExample07 = true;
+  isExample08 = false;
   appExample01Interpolation = true;
   appNgif = false;
   appNgfor = false;
@@ -34,6 +35,7 @@ export class AppComponent {
     this.isExample05 = event.srcElement.value === 'isExample05';
     this.isExample06 = event.srcElement.value === 'isExample06';
     this.isExample07 = event.srcElement.value === 'isExample07';
+    this.isExample08 = event.srcElement.value === 'isExample08';
   }
 
   /**
