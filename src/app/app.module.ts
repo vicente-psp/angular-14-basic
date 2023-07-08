@@ -16,8 +16,6 @@ import { ReviewComponent } from './example06-directives/review/review.component'
 import { ResultComponent } from './example07-components/result/result.component';
 import { ButtonComponent } from './example07-components/button/button.component';
 import { DescriptionComponent } from './example07-components/description/description.component';
-import { Module01Module } from './example08-modules/module01/module01.module';
-import { Module02Module } from './example08-modules/module02/module02.module';
 
 @NgModule({
   declarations: [
@@ -34,14 +32,12 @@ import { Module02Module } from './example08-modules/module02/module02.module';
     ReviewComponent,
     ResultComponent,
     ButtonComponent,
-    DescriptionComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
-    Module01Module,
-    Module02Module
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
