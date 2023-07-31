@@ -1,0 +1,6 @@
+<div class="container"
+  [ngClass]="{success: type === typeEnum.SUCCESS, warning: type === typeEnum.WARNING, error: type === typeEnum.ERROR}">
+  <span>
+    <ng-content></ng-content>
+  </span>
+</div>
