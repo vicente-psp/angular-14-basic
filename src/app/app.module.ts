@@ -13,10 +13,8 @@ import { NgforComponent } from './example06-directives/structural-directives/ngf
 import { NgswitchComponent } from './example06-directives/structural-directives/ngswitch/ngswitch.component';
 import { AttributeDirectivesComponent } from './example06-directives/attribute-directives/attribute-directives.component';
 import { ReviewComponent } from './example06-directives/review/review.component';
-import { ResultComponent } from './example07-components/result/result.component';
-import { ButtonComponent } from './example07-components/button/button.component';
-import { DescriptionComponent } from './example07-components/description/description.component';
 import { Module01Module } from './example08-modules/module01/module01.module';
+import { Example07ComponentsModule } from './example07-components/example07-components.module';
 
 @NgModule({
   declarations: [
@@ -30,16 +28,14 @@ import { Module01Module } from './example08-modules/module01/module01.module';
     NgforComponent,
     NgswitchComponent,
     AttributeDirectivesComponent,
-    ReviewComponent,
-    ResultComponent,
-    ButtonComponent,
-    DescriptionComponent
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    Module01Module
+    Module01Module,
+    Example07ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

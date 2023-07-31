@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-result',
@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ResultComponent {
 
-  currentValue = 0;
+  @Input() currentValue = 0;
+  @Output() currentValueChange: EventEmitter<number> = new EventEmitter();
 
   incrementClick(): void {
     this.currentValue++;
+    this.currentValueChange.emit(this.currentValue);
   }
 
   decrementClick(): void {
@@ -18,6 +20,7 @@ export class ResultComponent {
       return;
     }
     this.currentValue--;
+    this.currentValueChange.emit(this.currentValue);
   }
 
 }

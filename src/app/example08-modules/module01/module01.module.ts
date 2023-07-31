@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AlertComponent } from './alert/alert.component';
 import { BaseCardComponent } from './base-card/base-card.component';
 import { SharedModule } from '../shared/shared.module';
+import { Example07ComponentsModule } from '../../example07-components/example07-components.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    Example07ComponentsModule
   ]
 })
 export class Module01Module { }
