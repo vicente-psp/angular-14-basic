@@ -15,6 +15,7 @@ import { AttributeDirectivesComponent } from './example06-directives/attribute-d
 import { ReviewComponent } from './example06-directives/review/review.component';
 import { Module01Module } from './example08-modules/module01/module01.module';
 import { Example07ComponentsModule } from './example07-components/example07-components.module';
+import { AlertCustomModule } from './example09-components/alert-custom/alert-custom.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { Example07ComponentsModule } from './example07-components/example07-comp
     FormsModule,
     ReactiveFormsModule,
     Module01Module,
-    Example07ComponentsModule
+    Example07ComponentsModule,
+    AlertCustomModule
   ],
   providers: [],
   bootstrap: [AppComponent]

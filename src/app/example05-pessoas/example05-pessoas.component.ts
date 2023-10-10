@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
+import { TypeEnum } from '../example09-components/alert-custom/alert-custom.component';
+
 @Component({
   selector: 'app-example05-pessoas',
   templateUrl: './example05-pessoas.component.html',
@@ -8,6 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class Example05PessoasComponent {
 
+  typeEnum = TypeEnum;
   titulo = 'Cadastro de pessoas';
   formGroupPessoa = new FormGroup({
     nome: new FormControl('', [Validators.required, Validators.minLength(2)]),

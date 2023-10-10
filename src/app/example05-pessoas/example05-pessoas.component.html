@@ -52,6 +52,8 @@
 </div>
 
 <!-- property binding -->
-<div class="formulario" [class]="formGroupPessoa.valid ? 'formulario-valid' : 'formulario-invalid'">
-  <p>{{ formGroupPessoa.valid ? 'formulário válido' : 'formulário inválido' }}</p>
+<div class="alert-custom">
+  <app-alert-custom [type]="formGroupPessoa.valid ? typeEnum.SUCCESS : typeEnum.ERROR">
+    <p>{{ formGroupPessoa.valid ? 'formulário válido' : 'formulário inválido' }}</p>
+  </app-alert-custom>
 </div>
