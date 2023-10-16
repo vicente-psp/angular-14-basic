@@ -16,6 +16,7 @@ import { ReviewComponent } from './example06-directives/review/review.component'
 import { Module01Module } from './example08-modules/module01/module01.module';
 import { Example07ComponentsModule } from './example07-components/example07-components.module';
 import { AlertCustomModule } from './example09-components/alert-custom/alert-custom.module';
+import { Example10PipesModule } from './example10-pipes/example10-pipes.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AlertCustomModule } from './example09-components/alert-custom/alert-cus
     ReactiveFormsModule,
     Module01Module,
     Example07ComponentsModule,
-    AlertCustomModule
+    AlertCustomModule,
+    Example10PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
